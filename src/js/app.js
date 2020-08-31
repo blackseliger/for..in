@@ -1,3 +1,4 @@
+
 const findValue = (numberKey, obj) => {
   for (const prop in obj) {
     if (prop.includes(numberKey) === true) {
@@ -5,6 +6,7 @@ const findValue = (numberKey, obj) => {
       return numberValue;
     }
   }
+  return null;
 };
 
 const orderByProps = (obj, arr) => {
@@ -26,6 +28,7 @@ const orderByProps = (obj, arr) => {
     if (a.key < b.key) {
       return -1;
     }
+    return null;
   });
   // eslint-disable-next-line max-len
   arrayProps.unshift({ key: firstKeyArr.join(), value: firstValueArr }, { key: secondKeyArr.join(), value: secondValueArr });
